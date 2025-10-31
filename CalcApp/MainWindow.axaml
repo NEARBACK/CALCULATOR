@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CalcApp.Views.MainWindow"
+        Width="320" Height="440"
+        Title="Calculator"
+        CanResize="False">
+    <Grid RowDefinitions="Auto,*" Margin="12">
+    <!-- Экран -->
+    <TextBox x:Name="Display"
+            Grid.Row="0"
+            IsReadOnly="True"
+            FontSize="32"
+            TextAlignment="Right"
+            VerticalContentAlignment="Center"
+            Text="0"
+            Margin="0,0,0,12" />
+
+
+    <!-- Кнопки -->
+    <Grid Grid.Row="1"
+        ColumnDefinitions="*,*,*,*,*"
+        RowDefinitions="*,*,*,*,*,*">
+
+    <!-- Row 0: утилиты/функции -->
+    <Button Grid.Row="0" Grid.Column="0" Content="C"   Click="OnButtonClick"/>
+    <Button Grid.Row="0" Grid.Column="1" Content="⌫"   Click="OnButtonClick"/>
+    <Button Grid.Row="0" Grid.Column="2" Content="√"   Click="OnButtonClick"/>
+    <Button Grid.Row="0" Grid.Column="3" Content="y√x" Click="OnButtonClick"/>
+    <Button Grid.Row="0" Grid.Column="4" Content="^"   Click="OnButtonClick"/>
+
+    <!-- Row 1: 7 8 9 ÷ -->
+    <Button Grid.Row="1" Grid.Column="0" Content="7"   Click="OnButtonClick"/>
+    <Button Grid.Row="1" Grid.Column="1" Content="8"   Click="OnButtonClick"/>
+    <Button Grid.Row="1" Grid.Column="2" Content="9"   Click="OnButtonClick"/>
+    <Button Grid.Row="1" Grid.Column="4" Content="÷"   Click="OnButtonClick"/>
+
+    <!-- Row 2: 4 5 6 × -->
+    <Button Grid.Row="2" Grid.Column="0" Content="4"   Click="OnButtonClick"/>
+    <Button Grid.Row="2" Grid.Column="1" Content="5"   Click="OnButtonClick"/>
+    <Button Grid.Row="2" Grid.Column="2" Content="6"   Click="OnButtonClick"/>
+    <Button Grid.Row="2" Grid.Column="4" Content="×"   Click="OnButtonClick"/>
+
+    <!-- Row 3: 1 2 3 − -->
+    <Button Grid.Row="3" Grid.Column="0" Content="1"   Click="OnButtonClick"/>
+    <Button Grid.Row="3" Grid.Column="1" Content="2"   Click="OnButtonClick"/>
+    <Button Grid.Row="3" Grid.Column="2" Content="3"   Click="OnButtonClick"/>
+    <Button Grid.Row="3" Grid.Column="4" Content="−"   Click="OnButtonClick"/>
+
+    <!-- Row 4: 0 . + -->
+    <Button Grid.Row="4" Grid.Column="0" Content="0"   Click="OnButtonClick" Grid.ColumnSpan="2"/>
+    <Button Grid.Row="4" Grid.Column="2" Content="."   Click="OnButtonClick"/>
+    <Button Grid.Row="4" Grid.Column="4" Content="+"   Click="OnButtonClick"/>
+
+    <!-- Row 5: = (на всю ширину) -->
+    <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" Content="=" Click="OnButtonClick"/>
+    </Grid>
+
+
+    </Grid>
+</Window>
